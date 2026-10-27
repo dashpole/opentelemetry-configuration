@@ -437,6 +437,11 @@ $defs:
         description: |
           Configure default histogram aggregation.
         defaultBehavior: explicit_bucket_histogram is used
+      authenticator/development:
+        $ref: common.yaml#/$defs/ExperimentalAuthenticator
+        description: |
+          Configure authenticator used to attach dynamic client credentials to outgoing requests.
+        defaultBehavior: no authenticator is used
   OtlpGrpcMetricExporter:
     type:
       - object
@@ -516,6 +521,11 @@ $defs:
         description: |
           Configure default histogram aggregation.
         defaultBehavior: explicit_bucket_histogram is used
+      authenticator/development:
+        $ref: common.yaml#/$defs/ExperimentalAuthenticator
+        description: |
+          Configure authenticator used to attach dynamic client credentials to outgoing requests.
+        defaultBehavior: no authenticator is used
   ExperimentalOtlpFileMetricExporter:
     type:
       - object

@@ -1,0 +1,13 @@
+file_format: "1.2"
+
+tracer_provider:
+  processors:
+    - batch:
+        exporter:
+          otlp_http:
+            endpoint: http://localhost:4318/v1/traces
+            authenticator/development:
+              # SNIPPET_START
+              # configure a custom authenticator registered via PluginComponentProvider
+              my_custom_authenticator:
+                property: value

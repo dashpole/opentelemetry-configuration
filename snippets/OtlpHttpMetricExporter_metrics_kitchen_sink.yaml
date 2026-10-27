@@ -22,3 +22,6 @@ meter_provider:
             encoding: protobuf
             temporality_preference: cumulative
             default_histogram_aggregation: explicit_bucket_histogram
+            authenticator/development:
+              my_custom_authenticator:
+                property: value

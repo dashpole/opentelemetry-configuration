@@ -142,6 +142,8 @@ typeSupportStatuses:
   - type: OtlpGrpcExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -151,6 +153,8 @@ typeSupportStatuses:
   - type: OtlpGrpcMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: default_histogram_aggregation
         status: not_implemented
       - property: max_request_size
@@ -165,6 +169,8 @@ typeSupportStatuses:
   - type: OtlpHttpExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -174,6 +180,8 @@ typeSupportStatuses:
   - type: OtlpHttpMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: default_histogram_aggregation
         status: not_implemented
       - property: max_request_size
@@ -277,6 +285,9 @@ typeSupportStatuses:
       - property: aggregation_cardinality_limit
         status: not_implemented
     notes: "`attribute_keys.excluded` is not implemented, only `attribute_keys.included` is supported."
+  - type: ExperimentalAuthenticator
+    status: not_implemented
+    propertyOverrides: []
   - type: ExperimentalCodeInstrumentation
     status: unknown
     propertyOverrides: []

@@ -20,3 +20,6 @@ meter_provider:
             max_request_size: 67108864
             max_response_size: 4194304
             timeout: 10000
+            authenticator/development:
+              my_custom_authenticator:
+                property: value

@@ -20,3 +20,6 @@ tracer_provider:
             max_response_size: 4194304
             timeout: 10000
             encoding: protobuf
+            authenticator/development:
+              my_custom_authenticator:
+                property: value

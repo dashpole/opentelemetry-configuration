@@ -116,6 +116,11 @@ $defs:
           Configure the encoding used for messages. 
           Implementations may not support json.
         defaultBehavior: protobuf is used
+      authenticator/development:
+        $ref: "#/$defs/ExperimentalAuthenticator"
+        description: |
+          Configure authenticator used to attach dynamic client credentials to outgoing requests.
+        defaultBehavior: no authenticator is used
   OtlpHttpEncoding:
     type:
       - string
@@ -195,6 +200,11 @@ $defs:
           Configure max time (in milliseconds) to wait for each export.
           Value must be non-negative. A value of 0 indicates no limit (infinity).
         defaultBehavior: 10000 is used
+      authenticator/development:
+        $ref: "#/$defs/ExperimentalAuthenticator"
+        description: |
+          Configure authenticator used to attach dynamic client credentials to outgoing requests.
+        defaultBehavior: no authenticator is used
   ExperimentalOtlpFileExporter:
     type:
       - object
@@ -336,3 +346,12 @@ $defs:
       warn2: warn2, severity number 14.
       warn3: warn3, severity number 15.
       warn4: warn4, severity number 16.
+  ExperimentalAuthenticator:
+    type: object
+    additionalProperties:
+      type:
+        - object
+        - "null"
+    minProperties: 1
+    maxProperties: 1
+    isSdkExtensionPlugin: true

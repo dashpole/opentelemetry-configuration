@@ -136,6 +136,8 @@ typeSupportStatuses:
   - type: OtlpGrpcExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -143,6 +145,8 @@ typeSupportStatuses:
   - type: OtlpGrpcMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: default_histogram_aggregation
         status: not_implemented
       - property: max_request_size
@@ -155,6 +159,8 @@ typeSupportStatuses:
   - type: OtlpHttpExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: encoding
         status: not_implemented
       - property: max_request_size
@@ -164,6 +170,8 @@ typeSupportStatuses:
   - type: OtlpHttpMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: default_histogram_aggregation
         status: not_implemented
       - property: encoding
@@ -259,6 +267,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: ViewStream
     status: unknown
+    propertyOverrides: []
+  - type: ExperimentalAuthenticator
+    status: not_implemented
     propertyOverrides: []
   - type: ExperimentalCodeInstrumentation
     status: not_implemented

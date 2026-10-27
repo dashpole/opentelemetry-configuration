@@ -2,6 +2,7 @@
 
 ### Schema
 
+* Add `ExperimentalAuthenticator` SDK extension plugin type and experimental `authenticator/development` property to OTLP exporters
 * **BREAKING (experimental property)**: Stabilize `PeriodicMetricReader.max_export_batch_size/development` to `PeriodicMetricReader.max_export_batch_size`
 
   <details>

@@ -130,6 +130,8 @@ typeSupportStatuses:
   - type: OtlpGrpcExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -137,6 +139,8 @@ typeSupportStatuses:
   - type: OtlpGrpcMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -147,6 +151,8 @@ typeSupportStatuses:
   - type: OtlpHttpExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -154,6 +160,8 @@ typeSupportStatuses:
   - type: OtlpHttpMetricExporter
     status: supported
     propertyOverrides:
+      - property: authenticator/development
+        status: not_implemented
       - property: max_request_size
         status: not_implemented
       - property: max_response_size
@@ -235,6 +243,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: ViewStream
     status: supported
+    propertyOverrides: []
+  - type: ExperimentalAuthenticator
+    status: not_implemented
     propertyOverrides: []
   - type: ExperimentalCodeInstrumentation
     status: not_implemented
