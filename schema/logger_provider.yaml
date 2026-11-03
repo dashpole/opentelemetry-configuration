@@ -11,6 +11,12 @@ properties:
     $ref: "#/$defs/LogRecordLimits"
     description: Configure log record limits. See also attribute_limits.
     defaultBehavior: default values as described in LogRecordLimits are used
+  minimum_stability/development:
+    $ref: common.yaml#/$defs/ExperimentalStability
+    description: |
+      Configure the minimum stability level of log records and attributes processed by the provider.
+      Log records with a stability level lower than .minimum_stability/development are dropped, and attributes with a stability level lower than .minimum_stability/development are disabled.
+    defaultBehavior: stable is used
   logger_configurator/development:
     $ref: "#/$defs/ExperimentalLoggerConfigurator"
     description: |

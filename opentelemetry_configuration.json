@@ -1305,6 +1305,16 @@
         "local"
       ]
     },
+    "ExperimentalStability": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "development",
+        "stable"
+      ]
+    },
     "ExperimentalTracerConfig": {
       "type": [
         "object"
@@ -1574,6 +1584,10 @@
           "$ref": "#/$defs/LogRecordLimits",
           "description": "Configure log record limits. See also attribute_limits.\nIf omitted, default values as described in LogRecordLimits are used.\n"
         },
+        "minimum_stability/development": {
+          "$ref": "#/$defs/ExperimentalStability",
+          "description": "Configure the minimum stability level of log records and attributes processed by the provider.\nLog records with a stability level lower than .minimum_stability/development are dropped, and attributes with a stability level lower than .minimum_stability/development are disabled.\nValues include:\n* development: Experimental telemetry that may change or be removed in minor versions.\n* stable: Telemetry covered by backward-compatibility guarantees.\nIf omitted, stable is used.\n"
+        },
         "logger_configurator/development": {
           "$ref": "#/$defs/ExperimentalLoggerConfigurator",
           "description": "Configure loggers.\nIf omitted, all loggers use default values as described in ExperimentalLoggerConfig.\n"
@@ -1690,6 +1704,10 @@
         "exemplar_filter": {
           "$ref": "#/$defs/ExemplarFilter",
           "description": "Configure the exemplar filter.\nValues include:\n* always_off: ExemplarFilter which makes no measurements eligible for being an Exemplar.\n* always_on: ExemplarFilter which makes all measurements eligible for being an Exemplar.\n* trace_based: ExemplarFilter which makes measurements recorded in the context of a sampled parent span eligible for being an Exemplar.\nIf omitted, trace_based is used.\n"
+        },
+        "minimum_stability/development": {
+          "$ref": "#/$defs/ExperimentalStability",
+          "description": "Configure the minimum stability level of instruments and attributes enabled by the provider.\nInstruments and attributes with a stability level lower than .minimum_stability/development are disabled unless explicitly enabled by a matching view.\nValues include:\n* development: Experimental telemetry that may change or be removed in minor versions.\n* stable: Telemetry covered by backward-compatibility guarantees.\nIf omitted, stable is used.\n"
         },
         "meter_configurator/development": {
           "$ref": "#/$defs/ExperimentalMeterConfigurator",
@@ -2588,6 +2606,10 @@
           "$ref": "#/$defs/IdGenerator",
           "description": "Configure the trace and span ID generator.\nIf omitted, RandomIdGenerator is used.\n"
         },
+        "minimum_stability/development": {
+          "$ref": "#/$defs/ExperimentalStability",
+          "description": "Configure the minimum stability level of spans and attributes processed by the provider.\nSpans with a stability level lower than .minimum_stability/development are not recorded, and attributes with a stability level lower than .minimum_stability/development are disabled.\nValues include:\n* development: Experimental telemetry that may change or be removed in minor versions.\n* stable: Telemetry covered by backward-compatibility guarantees.\nIf omitted, stable is used.\n"
+        },
         "tracer_configurator/development": {
           "$ref": "#/$defs/ExperimentalTracerConfigurator",
           "description": "Configure tracers.\nIf omitted, all tracers use default values as described in ExperimentalTracerConfig.\n"
@@ -2693,6 +2715,13 @@
         "attribute_keys": {
           "$ref": "#/$defs/IncludeExclude",
           "description": "Configure attribute keys retained in the resulting stream(s).\nIf omitted, all attribute keys are retained.\n"
+        },
+        "enabled/development": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Configure whether the resulting stream(s) are enabled or not.\nIf true, the resulting stream(s) are enabled regardless of the instrument's OptIn or Stability advisory parameters.\nIf false, Drop Aggregation is used regardless of .aggregation.\nIf omitted or null, the instrument's OptIn and Stability advisory parameters and the meter provider's .minimum_stability/development determine whether the resulting stream(s) are enabled.\n"
         }
       }
     }

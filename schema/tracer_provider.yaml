@@ -21,6 +21,12 @@ properties:
     description: |
       Configure the trace and span ID generator.
     defaultBehavior: RandomIdGenerator is used
+  minimum_stability/development:
+    $ref: common.yaml#/$defs/ExperimentalStability
+    description: |
+      Configure the minimum stability level of spans and attributes processed by the provider.
+      Spans with a stability level lower than .minimum_stability/development are not recorded, and attributes with a stability level lower than .minimum_stability/development are disabled.
+    defaultBehavior: stable is used
   tracer_configurator/development:
     $ref: "#/$defs/ExperimentalTracerConfigurator"
     description: |

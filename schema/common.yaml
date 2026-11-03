@@ -336,3 +336,13 @@ $defs:
       warn2: warn2, severity number 14.
       warn3: warn3, severity number 15.
       warn4: warn4, severity number 16.
+  ExperimentalStability:
+    type:
+      - string
+      - "null"
+    enum:
+      - development
+      - stable
+    enumDescriptions:
+      development: Experimental telemetry that may change or be removed in minor versions.
+      stable: Telemetry covered by backward-compatibility guarantees.

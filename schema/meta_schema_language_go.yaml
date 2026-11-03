@@ -98,6 +98,8 @@ typeSupportStatuses:
     propertyOverrides:
       - property: logger_configurator/development
         status: not_implemented
+      - property: minimum_stability/development
+        status: not_implemented
   - type: LogRecordExporter
     status: supported
     propertyOverrides:
@@ -116,6 +118,8 @@ typeSupportStatuses:
   - type: MeterProvider
     status: supported
     propertyOverrides:
+      - property: minimum_stability/development
+        status: not_implemented
       - property: view_matching_mode/development
         status: not_implemented
   - type: MetricProducer
@@ -250,7 +254,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: TracerProvider
     status: unknown
-    propertyOverrides: []
+    propertyOverrides:
+      - property: minimum_stability/development
+        status: not_implemented
   - type: View
     status: unknown
     propertyOverrides: []
@@ -259,7 +265,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: ViewStream
     status: unknown
-    propertyOverrides: []
+    propertyOverrides:
+      - property: enabled/development
+        status: not_implemented
   - type: ExperimentalCodeInstrumentation
     status: not_implemented
     propertyOverrides: []
@@ -385,6 +393,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: ExperimentalSpanParent
     status: unknown
+    enumOverrides: []
+  - type: ExperimentalStability
+    status: not_implemented
     enumOverrides: []
   - type: ExperimentalTracerConfig
     status: unknown

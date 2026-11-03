@@ -1,0 +1,16 @@
+file_format: "1.2"
+
+meter_provider:
+  readers:
+    - periodic:
+        exporter:
+          console:
+  views:
+    -
+      # SNIPPET_START
+      # Selectively enable a development or opt_in instrument while keeping
+      # the provider-level minimum_stability/development at stable.
+      selector:
+        instrument_name: http.server.active_requests
+      stream:
+        enabled/development: true

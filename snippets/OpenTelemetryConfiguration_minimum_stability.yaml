@@ -1,0 +1,20 @@
+# SNIPPET_START
+file_format: "1.2"
+tracer_provider:
+  minimum_stability/development: development
+  processors:
+    - batch:
+        exporter:
+          otlp_http: {}
+meter_provider:
+  minimum_stability/development: development
+  readers:
+    - periodic:
+        exporter:
+          otlp_http: {}
+logger_provider:
+  minimum_stability/development: development
+  processors:
+    - batch:
+        exporter:
+          otlp_http: {}

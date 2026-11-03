@@ -1,0 +1,4 @@
+otel_config_validator shelltests/invalid_minimum_stability.yaml
+>>>2
+jsonschema: '/tracer_provider/minimum_stability~1development' does not validate with https://opentelemetry.io/otelconfig/opentelemetry_configuration.json#/properties/tracer_provider/$ref/properties/minimum_stability~1development/$ref/enum: value must be one of "development", "stable"
+>>>= 1

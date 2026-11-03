@@ -21,6 +21,12 @@ properties:
     description: |
       Configure the exemplar filter.
     defaultBehavior: trace_based is used
+  minimum_stability/development:
+    $ref: common.yaml#/$defs/ExperimentalStability
+    description: |
+      Configure the minimum stability level of instruments and attributes enabled by the provider.
+      Instruments and attributes with a stability level lower than .minimum_stability/development are disabled unless explicitly enabled by a matching view.
+    defaultBehavior: stable is used
   meter_configurator/development:
     $ref: "#/$defs/ExperimentalMeterConfigurator"
     description: |
@@ -671,6 +677,15 @@ $defs:
         description: |
           Configure attribute keys retained in the resulting stream(s).
         defaultBehavior: all attribute keys are retained
+      enabled/development:
+        type:
+          - boolean
+          - "null"
+        description: |
+          Configure whether the resulting stream(s) are enabled or not.
+          If true, the resulting stream(s) are enabled regardless of the instrument's OptIn or Stability advisory parameters.
+          If false, Drop Aggregation is used regardless of .aggregation.
+        defaultBehavior: the instrument's OptIn and Stability advisory parameters and the meter provider's .minimum_stability/development determine whether the resulting stream(s) are enabled
   Aggregation:
     type: object
     additionalProperties: false

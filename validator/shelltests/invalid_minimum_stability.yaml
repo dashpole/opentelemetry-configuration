@@ -1,0 +1,7 @@
+file_format: "1.2"
+tracer_provider:
+  minimum_stability/development: experimental
+  processors:
+    - simple:
+        exporter:
+          console: {}

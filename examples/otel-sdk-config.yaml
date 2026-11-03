@@ -23,6 +23,7 @@ propagator:
     - tracecontext:
     - baggage:
 tracer_provider:
+  minimum_stability/development: stable
   processors:
     - batch:
         schedule_delay: 5000
@@ -59,6 +60,7 @@ tracer_provider:
       local_parent_not_sampled:
         always_off:
 meter_provider:
+  minimum_stability/development: stable
   readers:
     - periodic:
         interval: 60000
@@ -76,6 +78,7 @@ meter_provider:
             default_histogram_aggregation: explicit_bucket_histogram
   exemplar_filter: trace_based
 logger_provider:
+  minimum_stability/development: stable
   processors:
     - batch:
         schedule_delay: 1000

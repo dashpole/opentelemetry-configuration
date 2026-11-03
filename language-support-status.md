@@ -46,11 +46,11 @@ Latest supported file format: `1.0.0`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | supported |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: supported<br> |
 | `LogRecordLimits` | supported |  | * `attribute_count_limit`: supported<br>* `attribute_value_depth_limit`: not_implemented<br>* `attribute_value_length_limit`: supported<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: not_implemented<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | supported |  | * `opencensus`: supported<br> |
 | `MetricReader` | supported |  | * `periodic`: supported<br>* `pull`: supported<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -81,10 +81,10 @@ Latest supported file format: `1.0.0`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `tracer_configurator/development`: supported<br> |
+| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: supported<br> |
 | `View` | supported |  | * `selector`: supported<br>* `stream`: supported<br> |
 | `ViewSelector` | supported |  | * `instrument_name`: supported<br>* `instrument_type`: supported<br>* `meter_name`: supported<br>* `meter_schema_url`: supported<br>* `meter_version`: supported<br>* `unit`: supported<br> |
-| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br> |
+| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | not_applicable |  | * `semconv`: not_applicable<br> |
 | `ExperimentalComposableAlwaysOffSampler` | supported |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | supported |  |  |
@@ -127,6 +127,7 @@ Latest supported file format: `1.0.0`
 | `ExperimentalSemconvConfig` | not_applicable |  | * `dual_emit`: not_applicable<br>* `experimental`: not_applicable<br>* `version`: not_applicable<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | supported |  | * `local`: supported<br>* `none`: supported<br>* `remote`: supported<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | supported |  | * `enabled`: supported<br> |
 | `ExperimentalTracerConfigurator` | supported |  | * `default_config`: supported<br>* `tracers`: supported<br> |
 | `ExperimentalTracerMatcherAndConfig` | supported |  | * `config`: supported<br>* `name`: supported<br> |
@@ -169,11 +170,11 @@ Latest supported file format: `1.0.0`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | supported |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: not_implemented<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: not_implemented<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: not_implemented<br> |
 | `LogRecordLimits` | supported |  | * `attribute_count_limit`: supported<br>* `attribute_value_depth_limit`: not_implemented<br>* `attribute_value_length_limit`: supported<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: unknown<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | unknown |  | * `opencensus`: unknown<br> |
 | `MetricReader` | unknown |  | * `periodic`: unknown<br>* `pull`: unknown<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -204,10 +205,10 @@ Latest supported file format: `1.0.0`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | unknown |  | * `id_generator`: unknown<br>* `limits`: unknown<br>* `processors`: unknown<br>* `sampler`: unknown<br>* `tracer_configurator/development`: unknown<br> |
+| `TracerProvider` | unknown |  | * `id_generator`: unknown<br>* `limits`: unknown<br>* `processors`: unknown<br>* `sampler`: unknown<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: unknown<br> |
 | `View` | unknown |  | * `selector`: unknown<br>* `stream`: unknown<br> |
 | `ViewSelector` | unknown |  | * `instrument_name`: unknown<br>* `instrument_type`: unknown<br>* `meter_name`: unknown<br>* `meter_schema_url`: unknown<br>* `meter_version`: unknown<br>* `unit`: unknown<br> |
-| `ViewStream` | unknown |  | * `aggregation`: unknown<br>* `aggregation_cardinality_limit`: unknown<br>* `attribute_keys`: unknown<br>* `description`: unknown<br>* `name`: unknown<br> |
+| `ViewStream` | unknown |  | * `aggregation`: unknown<br>* `aggregation_cardinality_limit`: unknown<br>* `attribute_keys`: unknown<br>* `description`: unknown<br>* `name`: unknown<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | not_implemented |  | * `semconv`: not_implemented<br> |
 | `ExperimentalComposableAlwaysOffSampler` | not_implemented |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | not_implemented |  |  |
@@ -250,6 +251,7 @@ Latest supported file format: `1.0.0`
 | `ExperimentalSemconvConfig` | unknown |  | * `dual_emit`: unknown<br>* `experimental`: unknown<br>* `version`: unknown<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | unknown |  | * `local`: unknown<br>* `none`: unknown<br>* `remote`: unknown<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | unknown |  | * `enabled`: unknown<br> |
 | `ExperimentalTracerConfigurator` | not_implemented |  | * `default_config`: not_implemented<br>* `tracers`: not_implemented<br> |
 | `ExperimentalTracerMatcherAndConfig` | unknown |  | * `config`: unknown<br>* `name`: unknown<br> |
@@ -292,11 +294,11 @@ Latest supported file format: `1.0.0-rc.3`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | supported |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: supported<br> |
 | `LogRecordLimits` | supported |  | * `attribute_count_limit`: supported<br>* `attribute_value_depth_limit`: not_implemented<br>* `attribute_value_length_limit`: supported<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: unknown<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | ignored |  | * `opencensus`: ignored<br> |
 | `MetricReader` | supported |  | * `periodic`: supported<br>* `pull`: supported<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -327,10 +329,10 @@ Latest supported file format: `1.0.0-rc.3`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `tracer_configurator/development`: supported<br> |
+| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: supported<br> |
 | `View` | supported |  | * `selector`: supported<br>* `stream`: supported<br> |
 | `ViewSelector` | supported |  | * `instrument_name`: supported<br>* `instrument_type`: supported<br>* `meter_name`: supported<br>* `meter_schema_url`: supported<br>* `meter_version`: supported<br>* `unit`: supported<br> |
-| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br> |
+| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | unknown |  | * `semconv`: unknown<br> |
 | `ExperimentalComposableAlwaysOffSampler` | supported |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | supported |  |  |
@@ -373,6 +375,7 @@ Latest supported file format: `1.0.0-rc.3`
 | `ExperimentalSemconvConfig` | unknown |  | * `dual_emit`: unknown<br>* `experimental`: unknown<br>* `version`: unknown<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | supported |  | * `local`: supported<br>* `none`: supported<br>* `remote`: supported<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | supported |  | * `enabled`: supported<br> |
 | `ExperimentalTracerConfigurator` | supported |  | * `default_config`: supported<br>* `tracers`: supported<br> |
 | `ExperimentalTracerMatcherAndConfig` | supported |  | * `config`: supported<br>* `name`: supported<br> |
@@ -415,11 +418,11 @@ Latest supported file format: `1.0.0-rc.3`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | supported |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: supported<br> |
 | `LogRecordLimits` | supported |  | * `attribute_count_limit`: supported<br>* `attribute_value_depth_limit`: not_implemented<br>* `attribute_value_length_limit`: supported<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: supported<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | supported |  | * `opencensus`: supported<br> |
 | `MetricReader` | supported |  | * `periodic`: supported<br>* `pull`: supported<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -450,10 +453,10 @@ Latest supported file format: `1.0.0-rc.3`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `tracer_configurator/development`: supported<br> |
+| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: supported<br> |
 | `View` | supported |  | * `selector`: supported<br>* `stream`: supported<br> |
 | `ViewSelector` | supported |  | * `instrument_name`: supported<br>* `instrument_type`: supported<br>* `meter_name`: supported<br>* `meter_schema_url`: supported<br>* `meter_version`: supported<br>* `unit`: supported<br> |
-| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br> |
+| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | not_implemented |  | * `semconv`: not_implemented<br> |
 | `ExperimentalComposableAlwaysOffSampler` | not_implemented |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | not_implemented |  |  |
@@ -496,6 +499,7 @@ Latest supported file format: `1.0.0-rc.3`
 | `ExperimentalSemconvConfig` | not_implemented |  | * `dual_emit`: not_implemented<br>* `experimental`: not_implemented<br>* `version`: not_implemented<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | not_implemented |  | * `local`: not_implemented<br>* `none`: not_implemented<br>* `remote`: not_implemented<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | not_implemented |  | * `enabled`: not_implemented<br> |
 | `ExperimentalTracerConfigurator` | not_implemented |  | * `default_config`: not_implemented<br>* `tracers`: not_implemented<br> |
 | `ExperimentalTracerMatcherAndConfig` | not_implemented |  | * `config`: not_implemented<br>* `name`: not_implemented<br> |
@@ -538,11 +542,11 @@ Latest supported file format: `1.0.0-rc.2`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | ignored |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: supported<br> |
 | `LogRecordLimits` | supported |  | * `attribute_count_limit`: supported<br>* `attribute_value_depth_limit`: not_implemented<br>* `attribute_value_length_limit`: supported<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: unknown<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | not_implemented |  | * `opencensus`: not_implemented<br> |
 | `MetricReader` | supported |  | * `periodic`: supported<br>* `pull`: not_implemented<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -573,10 +577,10 @@ Latest supported file format: `1.0.0-rc.2`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `tracer_configurator/development`: supported<br> |
+| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: supported<br> |
 | `View` | supported |  | * `selector`: supported<br>* `stream`: supported<br> |
 | `ViewSelector` | supported |  | * `instrument_name`: supported<br>* `instrument_type`: supported<br>* `meter_name`: supported<br>* `meter_schema_url`: supported<br>* `meter_version`: supported<br>* `unit`: not_implemented<br> |
-| `ViewStream` | supported | `attribute_keys.excluded` is not implemented, only `attribute_keys.included` is supported. | * `aggregation`: ignored<br>* `aggregation_cardinality_limit`: not_implemented<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br> |
+| `ViewStream` | supported | `attribute_keys.excluded` is not implemented, only `attribute_keys.included` is supported. | * `aggregation`: ignored<br>* `aggregation_cardinality_limit`: not_implemented<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | unknown |  | * `semconv`: unknown<br> |
 | `ExperimentalComposableAlwaysOffSampler` | not_implemented |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | not_implemented |  |  |
@@ -619,6 +623,7 @@ Latest supported file format: `1.0.0-rc.2`
 | `ExperimentalSemconvConfig` | unknown |  | * `dual_emit`: unknown<br>* `experimental`: unknown<br>* `version`: unknown<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | not_implemented |  | * `local`: not_implemented<br>* `none`: not_implemented<br>* `remote`: not_implemented<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | supported |  | * `enabled`: supported<br> |
 | `ExperimentalTracerConfigurator` | supported |  | * `default_config`: supported<br>* `tracers`: supported<br> |
 | `ExperimentalTracerMatcherAndConfig` | supported |  | * `config`: supported<br>* `name`: supported<br> |
@@ -661,11 +666,11 @@ Latest supported file format: `1.0.0`
 | `IncludeExclude` | supported |  | * `excluded`: supported<br>* `included`: supported<br> |
 | `InstrumentType` | supported |  | * `counter`: supported<br>* `gauge`: supported<br>* `histogram`: supported<br>* `observable_counter`: supported<br>* `observable_gauge`: supported<br>* `observable_up_down_counter`: supported<br>* `up_down_counter`: supported<br> |
 | `LastValueAggregation` | supported |  |  |
-| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br> |
+| `LoggerProvider` | supported |  | * `limits`: supported<br>* `processors`: supported<br>* `logger_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br> |
 | `LogRecordExporter` | supported |  | * `console`: supported<br>* `otlp_grpc`: supported<br>* `otlp_http`: supported<br>* `otlp_file/development`: supported<br> |
 | `LogRecordLimits` | ignored |  | * `attribute_count_limit`: ignored<br>* `attribute_value_depth_limit`: ignored<br>* `attribute_value_length_limit`: ignored<br> |
 | `LogRecordProcessor` | supported |  | * `batch`: supported<br>* `simple`: supported<br>* `event_to_span_event_bridge/development`: supported<br> |
-| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `view_matching_mode/development`: not_implemented<br> |
+| `MeterProvider` | supported |  | * `exemplar_filter`: supported<br>* `readers`: supported<br>* `views`: supported<br>* `meter_configurator/development`: supported<br>* `minimum_stability/development`: not_implemented<br>* `view_matching_mode/development`: not_implemented<br> |
 | `MetricProducer` | ignored |  | * `opencensus`: ignored<br> |
 | `MetricReader` | supported |  | * `periodic`: supported<br>* `pull`: supported<br> |
 | `NameStringValuePair` | supported |  | * `name`: supported<br>* `value`: supported<br> |
@@ -696,10 +701,10 @@ Latest supported file format: `1.0.0`
 | `TextMapPropagator` | supported |  | * `b3`: supported<br>* `b3multi`: supported<br>* `baggage`: supported<br>* `tracecontext`: supported<br> |
 | `TraceContextPropagator` | supported |  |  |
 | `TraceIdRatioBasedSampler` | supported |  | * `ratio`: supported<br> |
-| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `tracer_configurator/development`: supported<br> |
+| `TracerProvider` | supported |  | * `id_generator`: supported<br>* `limits`: supported<br>* `processors`: supported<br>* `sampler`: supported<br>* `minimum_stability/development`: not_implemented<br>* `tracer_configurator/development`: supported<br> |
 | `View` | supported |  | * `selector`: supported<br>* `stream`: supported<br> |
 | `ViewSelector` | supported |  | * `instrument_name`: supported<br>* `instrument_type`: supported<br>* `meter_name`: supported<br>* `meter_schema_url`: supported<br>* `meter_version`: supported<br>* `unit`: supported<br> |
-| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br> |
+| `ViewStream` | supported |  | * `aggregation`: supported<br>* `aggregation_cardinality_limit`: supported<br>* `attribute_keys`: supported<br>* `description`: supported<br>* `name`: supported<br>* `enabled/development`: not_implemented<br> |
 | `ExperimentalCodeInstrumentation` | ignored |  | * `semconv`: ignored<br> |
 | `ExperimentalComposableAlwaysOffSampler` | supported |  |  |
 | `ExperimentalComposableAlwaysOnSampler` | supported |  |  |
@@ -742,6 +747,7 @@ Latest supported file format: `1.0.0`
 | `ExperimentalSemconvConfig` | ignored |  | * `dual_emit`: ignored<br>* `experimental`: ignored<br>* `version`: ignored<br> |
 | `ExperimentalServiceResourceDetector` | supported |  |  |
 | `ExperimentalSpanParent` | supported |  | * `local`: supported<br>* `none`: supported<br>* `remote`: supported<br> |
+| `ExperimentalStability` | not_implemented |  | * `development`: not_implemented<br>* `stable`: not_implemented<br> |
 | `ExperimentalTracerConfig` | ignored |  | * `enabled`: ignored<br> |
 | `ExperimentalTracerConfigurator` | ignored |  | * `default_config`: ignored<br>* `tracers`: ignored<br> |
 | `ExperimentalTracerMatcherAndConfig` | ignored |  | * `config`: ignored<br>* `name`: ignored<br> |

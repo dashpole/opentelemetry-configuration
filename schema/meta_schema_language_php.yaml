@@ -99,7 +99,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: LoggerProvider
     status: supported
-    propertyOverrides: []
+    propertyOverrides:
+      - property: minimum_stability/development
+        status: not_implemented
   - type: LogRecordExporter
     status: supported
     propertyOverrides: []
@@ -116,6 +118,8 @@ typeSupportStatuses:
   - type: MeterProvider
     status: supported
     propertyOverrides:
+      - property: minimum_stability/development
+        status: not_implemented
       - property: view_matching_mode/development
         status: not_implemented
   - type: MetricProducer
@@ -260,7 +264,9 @@ typeSupportStatuses:
     propertyOverrides: []
   - type: TracerProvider
     status: supported
-    propertyOverrides: []
+    propertyOverrides:
+      - property: minimum_stability/development
+        status: not_implemented
   - type: View
     status: supported
     propertyOverrides: []
@@ -275,6 +281,8 @@ typeSupportStatuses:
       - property: aggregation
         status: ignored
       - property: aggregation_cardinality_limit
+        status: not_implemented
+      - property: enabled/development
         status: not_implemented
     notes: "`attribute_keys.excluded` is not implemented, only `attribute_keys.included` is supported."
   - type: ExperimentalCodeInstrumentation
@@ -429,6 +437,9 @@ typeSupportStatuses:
     status: supported
     propertyOverrides: []
   - type: ExperimentalSpanParent
+    status: not_implemented
+    enumOverrides: []
+  - type: ExperimentalStability
     status: not_implemented
     enumOverrides: []
   - type: ExperimentalTracerConfig
